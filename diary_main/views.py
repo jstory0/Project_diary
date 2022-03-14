@@ -77,6 +77,20 @@ def b_delete(request):
     return redirect('diary_main:b_list')
 
 
+# def b_like(request):
+#     post_id = request.GET['post_id']
+#     post = get_object_or_404(Board, pk=post_id)
+#     post.b_like_count += 1
+#     board_detail_form = BoardDetailForm(instance=post)
+#     context = {
+#         "detail_form": board_detail_form,
+#         'post': post
+#     }
+#     post.save()
+#
+#     return render(request, 'diary_main/detail.html', context)
+
+
 def b_like(request):
     post_id = request.GET['post_id']
     post = get_object_or_404(Board, pk=post_id)
